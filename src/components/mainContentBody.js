@@ -1,5 +1,6 @@
 import React from 'react';
 import ChatInput from './chatInput';
+import mmlogo from '../assets/mmlogo.png'
 
 const dummyAvatarComments = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -13,7 +14,7 @@ const MainContentBody = () => {
               <button>
                 <img
                   className='w-10 h-10 rounded-full'
-                  src='https://avatars3.githubusercontent.com/u/22605062?s=460&v=4'
+                  src={mmlogo}
                   alt='avatar'
                 />
               </button>
@@ -21,12 +22,12 @@ const MainContentBody = () => {
             <div className='ml-5'>
               <div>
                 <button className='text-white hover:underline'>
-                  drehimself
+                  Malachi
                 </button>
                 <span className='text-xs text-gray-600 ml-1'>07/19/2019</span>
               </div>
               <div>
-                <div>yea hahah</div>
+                <div> hahah</div>
                 <div>some other comments</div>
               </div>
             </div>

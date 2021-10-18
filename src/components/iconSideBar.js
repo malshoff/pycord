@@ -20,27 +20,14 @@ const IconSideBar = () => {
           </li>
           <li className='border-b border-gray-700 mx-4 mt-3'></li>
           <li className='mt-3'>
-            <SvgIconLaravel
-              tailwindProps={'w-12 h-12 rounded-full mx-auto'}
-              alt={'laravel'}
-            />
-          </li>
-          <li className='mt-3'>
-            <SvgIconTailwind
-              tailwindProps={'w-12 h-12 rounded-full mx-auto'}
-              alt={'tailwindcss'}
-            />
+            <img src='https://cdn.discordapp.com/icons/577983109409275904/95e26ff833c7998a556913cf3fd52c06.png' alt='MalVivIcon' className='w-12 h-12 rounded-full mx-auto'/>
           </li>
           <li className='mt-3'>
             <IconPlus />
           </li>
-          <li class='mt-2'>
-            <IconSearch />
-          </li>
-          <li className='border-b border-gray-700 mx-4 mt-3'></li>
-          <li className='mt-3'>
-            <IconDownload />
-          </li>
+        
+          
+         
         </ul>
       </div>
     </div>
