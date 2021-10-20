@@ -6,6 +6,8 @@ import MainContentBody from './mainContentBody';
 import UserSidebar from './userSidebar';
 
 const Discord = () => {
+  var ws = new WebSocket("ws://localhost:8001/ws/1");
+
   return (
     <div className='flex'>
       {/* Icon left sidebar */}
@@ -22,7 +24,7 @@ const Discord = () => {
           {/* End of left sidebar */}
           <div className='flex-1 flex justify-between'>
             {/* Main content area */}
-            <MainContentBody />
+            <MainContentBody ws={ws} />
             {/* End of main content */}
             {/* User sidebar */}
             <UserSidebar />
