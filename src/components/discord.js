@@ -1,12 +1,29 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import IconSideBar from './iconSideBar';
 import TopBar from './topBar';
 import LeftSideBar from './leftSideBar';
 import MainContentBody from './mainContentBody';
 import UserSidebar from './userSidebar';
+import { io } from 'socket.io-client';
 
 const Discord = () => {
-  var ws = new WebSocket("ws://localhost:8001/ws/1");
+
+    useEffect(() => {
+    const socket =  io('ws://localhost:8000', {
+      path: '/ws/socket.io',
+      autoConnect: true
+  })
+
+    socket.on('connect', (data) => {
+      console.log("connected")
+    })
+    
+      socket.on('message', (data) => {
+        console.log(data);
+    })
+    
+    return () => socket.off();
+  },[]);
 
   return (
     <div className='flex'>
@@ -24,7 +41,7 @@ const Discord = () => {
           {/* End of left sidebar */}
           <div className='flex-1 flex justify-between'>
             {/* Main content area */}
-            <MainContentBody ws={ws} />
+            <MainContentBody/>
             {/* End of main content */}
             {/* User sidebar */}
             <UserSidebar />
